@@ -114,7 +114,7 @@ public class Product {
 	 * 
 	 * @return name ~
 	 */
-	public String getName() {
+	public String getProductName() {
 		return name;
 	}
 
