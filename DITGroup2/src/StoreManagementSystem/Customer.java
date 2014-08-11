@@ -19,4 +19,8 @@ public class Customer extends Person {
 		this.setId(id);
 		this.setName(name);
 	}
+	public Customer(){
+		
+	}
+	
 }
