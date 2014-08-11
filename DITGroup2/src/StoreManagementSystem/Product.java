@@ -9,7 +9,7 @@ public class Product {
 	@SuppressWarnings("javadoc")
 	
 	private int productID, supplierID;
-	private String name, description, category;
+	private String productName, description, category;
 	private double retailPrice, supplierPrice, profitMargin;
 
 	/**
@@ -42,8 +42,8 @@ public class Product {
 	 * 
 	 * @param name ~
 	 */
-	public void setName(String name) {
-		this.name = name;
+	public void setproductName(String productName) {
+		this.productName = productName;
 	}
 
 	/**
@@ -115,7 +115,7 @@ public class Product {
 	 * @return name ~
 	 */
 	public String getProductName() {
-		return name;
+		return productName;
 	}
 
 	/**
