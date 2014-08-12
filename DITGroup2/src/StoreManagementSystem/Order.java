@@ -1,7 +1,7 @@
 package StoreManagementSystem;
 
 import java.util.ArrayList;
-
+ 
 public class Order {
 
 	protected ArrayList<Object[]> purchaseList;  //Includes quantity and product ID

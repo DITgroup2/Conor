@@ -1,5 +1,5 @@
 package StoreManagementSystem;
-
+ 
 import java.util.Date;
 
 public class PurchaseOrder extends Order{

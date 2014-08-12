@@ -1,5 +1,5 @@
 package StoreManagementSystem;
-
+ 
 import java.util.ArrayList;
 
 public class StockControl {

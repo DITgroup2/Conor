@@ -1,7 +1,7 @@
 package StoreManagementSystem;
 
 
-
+ 
 //********************************************************************
 //Keyboard.java       Author: Lewis and Loftus
 //

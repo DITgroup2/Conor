@@ -1,5 +1,5 @@
 package StoreManagementSystem;
-
+ 
 public class Supplier extends Person {
 	private  String contactName;
 	private  String vatNumber;

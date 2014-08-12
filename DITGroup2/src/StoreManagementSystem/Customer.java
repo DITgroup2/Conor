@@ -1,5 +1,5 @@
 package StoreManagementSystem;
-
+ 
 public class Customer extends Person {
 
 	public Customer() {
@@ -11,3 +11,4 @@ public class Customer extends Person {
 		super(name, email, contactNumber, address);
 	}
 }
+    

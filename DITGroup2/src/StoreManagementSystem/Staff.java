@@ -1,5 +1,5 @@
 package StoreManagementSystem;
-
+ 
 public class Staff extends Person{
 	
 	private String password;
