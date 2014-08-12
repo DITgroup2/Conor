@@ -12,6 +12,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
@@ -102,10 +103,15 @@ public class Login extends JFrame {
 			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
-			if(login)
-				System.out.println("Login successul!");
+			if(login){
+				JOptionPane.showMessageDialog(null,"Login successful");
+				setVisible(false);
+				dispose();
+				MainDisplay display = new MainDisplay();
+				display.run();
+			}
 			else
-				System.out.println("Invalid login!");
+				JOptionPane.showMessageDialog(null,"Invalid username or password!");
 		}
 	}
 }

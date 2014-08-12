@@ -18,7 +18,7 @@ public class StockControl {
 	public void addProduct(String name, double retailPrice) {
 		Product p = new Product();
 		p.setProductID(++index);
-		p.setName(name);
+		p.setProductName(name);
 		p.setRetailPrice(retailPrice);
 		inventory.add(p);
 	}

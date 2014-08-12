@@ -42,7 +42,7 @@ public class Product {
 	 * 
 	 * @param name ~
 	 */
-	public void setproductName(String productName) {
+	public void setProductName(String productName) {
 		this.productName = productName;
 	}
 

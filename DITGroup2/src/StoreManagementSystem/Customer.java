@@ -1,6 +1,6 @@
 package StoreManagementSystem;
 /**
- * Contains details about the customer. Only a name and ID is reqired on
+ * Contains details about the customer. Only a name and ID is required on
  * creation. The public methods from the Person class are inherited by the
  * customer class
  * 
@@ -22,5 +22,4 @@ public class Customer extends Person {
 	public Customer(){
 		
 	}
-	
 }

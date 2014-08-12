@@ -5,12 +5,12 @@ import java.util.Date;
 public class PurchaseOrder extends Order{
 	
 	private double shippingPrice;
-
+	private Customer customer;
+	
 	public PurchaseOrder() {
 		super();
-		// TODO Auto-generated constructor stub
 		shippingPrice = 10.0;
-		this.person = new Customer();
+		this.customer = new Customer();
 	}
 	
 	private double calculateTotalPrice(){
