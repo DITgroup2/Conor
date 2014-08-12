@@ -111,6 +111,7 @@ public class Login extends JFrame {
 				setVisible(false);
 				dispose();
 				MainDisplay display = new MainDisplay();
+				//Access level
 				display.run();
 			}
 			else

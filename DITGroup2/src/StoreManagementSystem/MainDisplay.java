@@ -11,7 +11,9 @@ import javax.swing.JLabel;
 import javax.swing.JInternalFrame;
 import java.awt.SystemColor;
 import java.awt.Color;
-
+/**
+ * The main application.
+ */
 public class MainDisplay extends JFrame {
 
 	private JPanel contentPane;
@@ -50,5 +52,11 @@ public class MainDisplay extends JFrame {
 		
 		JLabel lblThisIsPane_1 = new JLabel("This is pane 2");
 		tabbedPane.addTab("Tab 2", null, lblThisIsPane_1, null);
+		
+		JTabbedPane tabbedPane_1 = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.addTab("Tab 3", null, tabbedPane_1, null);
+		
+		JTabbedPane tabbedPane_2 = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.addTab("Tab 4", null, tabbedPane_2, null);
 	}
 }

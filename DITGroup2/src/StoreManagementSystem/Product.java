@@ -1,10 +1,10 @@
 package StoreManagementSystem;
+
+import java.util.ArrayList;
 /**
  * Product class
  * @author Conor Clarke
  */
-import java.util.ArrayList;
-
 public class Product {
 	@SuppressWarnings("javadoc")
 	
@@ -22,7 +22,7 @@ public class Product {
 	/**
 	 * Set the product ID
 	 * 
-	 * @param productID ~
+	 *  @param productID
 	 */
 	public void setProductID(int productID) {
 		this.productID = productID;
@@ -31,7 +31,7 @@ public class Product {
 	/**
 	 * Set the supplier ID
 	 * 
-	 * @param supplierID ~
+	 *  @param supplierID
 	 */
 	public void setSupplierID(int supplierID) {
 		this.supplierID = supplierID;
@@ -40,7 +40,7 @@ public class Product {
 	/**
 	 * Set the name of the item
 	 * 
-	 * @param name ~
+	 *  @param productName
 	 */
 	public void setProductName(String productName) {
 		this.productName = productName;
@@ -49,7 +49,7 @@ public class Product {
 	/**
 	 * Set the description for the item
 	 * 
-	 * @param description ~
+	 *  @param description
 	 */
 	public void setDescription(String description) {
 		this.description = description;
@@ -58,7 +58,7 @@ public class Product {
 	/**
 	 * Set the category for the item
 	 * 
-	 * @param category ~
+	 *  @param category
 	 */
 	public void setCategory(String category) {
 		this.category = category;
@@ -67,7 +67,7 @@ public class Product {
 	/**
 	 * Set the retail price
 	 * 
-	 * @param retailPrice ~
+	 * @param retailPrice
 	 */
 	public void setRetailPrice(double retailPrice) {
 		this.retailPrice = retailPrice;
@@ -76,7 +76,7 @@ public class Product {
 	/**
 	 * Set the supplier price
 	 * 
-	 * @param supplierPrice ~
+	 *  @param supplierPrice
 	 */
 	public void setsupplierPrice(double supplierPrice) {
 		this.supplierPrice = supplierPrice;
@@ -85,7 +85,7 @@ public class Product {
 	/**
 	 * Set the profit margin for the shop
 	 * 
-	 * @param profitMargin ~
+	 *  @param profitMargin
 	 */
 	public void setProfitMargin(double profitMargin) {
 		this.profitMargin = profitMargin;
@@ -94,7 +94,7 @@ public class Product {
 	/**
 	 * Return the product ID
 	 * 
-	 * @return productID ~
+	 *  @return productID
 	 */
 	public int getProductID() {
 		return productID;
@@ -103,7 +103,7 @@ public class Product {
 	/**
 	 * Return the supplier ID
 	 * 
-	 * @return supplierID ~
+	 *  @return supplierID
 	 */
 	public int getSupplierID() {
 		return supplierID;
@@ -112,7 +112,7 @@ public class Product {
 	/**
 	 * Return the product name
 	 * 
-	 * @return name ~
+	 *  @return name
 	 */
 	public String getProductName() {
 		return productName;
@@ -121,7 +121,7 @@ public class Product {
 	/**
 	 * Return the product description
 	 * 
-	 * @return description ~
+	 * @return description
 	 */
 	public String getDescription() {
 		return description;
@@ -130,7 +130,7 @@ public class Product {
 	/**
 	 * Return the product category
 	 * 
-	 * @return category ~
+	 * @return category
 	 */
 	public String getCategory() {
 		return category;
@@ -139,7 +139,7 @@ public class Product {
 	/**
 	 * Return the retail price
 	 * 
-	 * @return retailPrice ~
+	 *  @return retailPrice
 	 */
 	public double getRetailPrice() {
 		return retailPrice;
@@ -148,7 +148,7 @@ public class Product {
 	/**
 	 * Return the supplier price
 	 * 
-	 * @return supplierPrice ~
+	 *  @return supplierPrice
 	 */
 	public double getsupplierPrice() {
 		return supplierPrice;
@@ -157,7 +157,7 @@ public class Product {
 	/**
 	 * Return the profit margin
 	 * 
-	 * @return profitMargin ~
+	 *  @return profitMargin
 	 */
 	public double getProfitMargin() {
 		return profitMargin;

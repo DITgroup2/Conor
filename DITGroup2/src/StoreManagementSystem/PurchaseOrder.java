@@ -1,7 +1,9 @@
 package StoreManagementSystem;
 
 import java.util.Date;
-
+/**
+ * Deals with purchases made from the store by customers
+ */
 public class PurchaseOrder extends Order{
 	
 	private double shippingPrice;

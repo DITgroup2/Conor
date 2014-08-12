@@ -1,7 +1,7 @@
 package StoreManagementSystem;
 /**
  * <pre>
- * Generic class for a person. Includes variables for:
+ * Generic Person class. Includes variables for:
  * - ID
  * - Name
  * - Address
