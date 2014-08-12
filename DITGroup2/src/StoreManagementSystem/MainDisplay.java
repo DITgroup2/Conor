@@ -6,6 +6,11 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JTabbedPane;
+import javax.swing.JLabel;
+import javax.swing.JInternalFrame;
+import java.awt.SystemColor;
+import java.awt.Color;
 
 public class MainDisplay extends JFrame {
 
@@ -28,11 +33,22 @@ public class MainDisplay extends JFrame {
 	 */
 	public MainDisplay() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 632, 442);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setBackground(SystemColor.window);
+		tabbedPane.setBounds(10, 11, 596, 381);
+		contentPane.add(tabbedPane);
+		
+		JLabel lblThisIsPane = new JLabel("This is pane 1");
+		tabbedPane.addTab("Tab 1", null, lblThisIsPane, null);
+		tabbedPane.setBackgroundAt(0, Color.WHITE);
+		
+		JLabel lblThisIsPane_1 = new JLabel("This is pane 2");
+		tabbedPane.addTab("Tab 2", null, lblThisIsPane_1, null);
 	}
-
 }

@@ -18,6 +18,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
+import javax.swing.JToolBar;
 
 /**
  * Launches a GUI for entering a username and password, with
@@ -36,6 +37,9 @@ public class Login extends JFrame {
 	private String usernameText = new String();
 	private final Action action = new SwingAction();
 
+	/**
+	 * Launches the window for the login screen
+	 */
 	public void run() {
 		try {
 			Login frame = new Login();
@@ -46,14 +50,15 @@ public class Login extends JFrame {
 	}
 	
 	/**
-	 * Launches the window for the login screen
+	 * Constructor for setting up the login screen with text fields 
+	 * for the username and password and a button
 	 */
 	public Login() {
 		Staff employee = new Staff(23,"hres",2);
 		
 		//Setup code for the JFrame and Panel
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 459, 339);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -86,10 +91,8 @@ public class Login extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				usernameText = username.getText();
-				System.out.println(usernameText);
 				char [] validate = passwordField.getPassword();
 				login = employee.passwordValidation(validate);
-				System.out.println(login);
 			}
 		});
 		
@@ -100,7 +103,7 @@ public class Login extends JFrame {
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
 			putValue(NAME, "Login");
-			putValue(SHORT_DESCRIPTION, "Some short description");
+			putValue(SHORT_DESCRIPTION, "Log in to the system");
 		}
 		public void actionPerformed(ActionEvent e) {
 			if(login){
