@@ -3,7 +3,10 @@ package StoreManagementSystem;
 import java.util.ArrayList;
 import java.util.Random;
 
-
+/**
+ * The main class. This launches the login page and performs the required
+ * functionality for the application
+ */
 public class RetailSystem {
 	private ArrayList<Person> list;
 	private ArrayList<Person> displayList;
@@ -20,7 +23,9 @@ public class RetailSystem {
 	private boolean valid = false;
 	private String userInput;
 	
-	
+	/**
+	 * Retail system constructor
+	 */
 	public RetailSystem() {
 		random = new Random();
 		list = new ArrayList<Person>();
@@ -37,7 +42,7 @@ public class RetailSystem {
 		
 		boolean terminateProgram = false;
 		do{
-			//displayMainMenu();
+			displayMainMenu();
 			menuOption = Keyboard.readInt();
 			
 			switch(menuOption){

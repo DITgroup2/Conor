@@ -46,17 +46,9 @@ public class MainDisplay extends JFrame {
 		tabbedPane.setBounds(10, 11, 596, 381);
 		contentPane.add(tabbedPane);
 		
-		JLabel lblThisIsPane = new JLabel("This is pane 1");
-		tabbedPane.addTab("Tab 1", null, lblThisIsPane, null);
-		tabbedPane.setBackgroundAt(0, Color.WHITE);
-		
-		JLabel lblThisIsPane_1 = new JLabel("This is pane 2");
-		tabbedPane.addTab("Tab 2", null, lblThisIsPane_1, null);
-		
-		JTabbedPane tabbedPane_1 = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.addTab("Tab 3", null, tabbedPane_1, null);
-		
-		JTabbedPane tabbedPane_2 = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.addTab("Tab 4", null, tabbedPane_2, null);
+		CustomerTab tabbedPane_1 = new CustomerTab();
+		SupplierTab supplierPane = new SupplierTab();
+		tabbedPane.addTab("Customer", null, tabbedPane_1, null);
+		tabbedPane.addTab("Supplier", null, supplierPane, null);
 	}
 }
