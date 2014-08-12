@@ -42,6 +42,7 @@ public class Order {
 	
 	/**
 	 * Return the list of products in the order
+	 * @return purchaseList
 	 */
 	public ArrayList<Object[]> getProductList() {
 		return purchaseList;
@@ -49,6 +50,7 @@ public class Order {
 	
 	/**
 	 * Add a new product to the inventory
+	 * @param productAndQuantity ~
 	 */
 	public void addProductToList(Object[] productAndQuantity) {
 		purchaseList.add(productAndQuantity);
@@ -56,6 +58,7 @@ public class Order {
 	
 	/**
 	 * Find the ID of the order
+	 * @return orderId
 	 */
 	public int getOrderId() {
 		return orderId;
@@ -63,6 +66,7 @@ public class Order {
 
 	/**
 	 * Find the person associated with the order
+	 * @return person
 	 */
 	public Person getPerson() {
 		return person;
@@ -70,6 +74,7 @@ public class Order {
 
 	/**
 	 * Set the person that requested the order
+	 * @param person ~
 	 */
 	public void setPerson(Person person) {
 		this.person = person;
@@ -77,6 +82,7 @@ public class Order {
 
 	/**
 	 * Returns whether the order has been processed or not
+	 * @return processed
 	 */
 	public boolean isProcessed() {
 		return processed;
@@ -85,6 +91,7 @@ public class Order {
 	/**
 	 * Sets the order to processed (true) or active (false).
 	 * The default value is false
+	 * @param processed ~
 	 */
 	public void setProcessed(boolean processed) {
 		this.processed = processed;
