@@ -1,25 +1,13 @@
 package StoreManagementSystem;
-/**
- * Contains details about the customer. Only a name and ID is required on
- * creation. The public methods from the Person class are inherited by the
- * customer class
- * 
- * @author Conor Clarke
- */
 
 public class Customer extends Person {
-	@SuppressWarnings("javadoc")
-	/**
-	 * Customer constructor
-	 * @param id ~
-	 * @param name ~
-	 */
-	public Customer(int id, String name) {
+
+	public Customer() {
 		super();
-		this.setId(id);
-		this.setName(name);
+		// TODO Auto-generated constructor stub
 	}
-	public Customer(){
-		
+
+	public Customer(String name, String email, String contactNumber, String address) {
+		super(name, email, contactNumber, address);
 	}
 }

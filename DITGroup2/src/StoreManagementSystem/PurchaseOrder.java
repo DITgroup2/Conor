@@ -1,18 +1,16 @@
 package StoreManagementSystem;
 
 import java.util.Date;
-/**
- * Deals with purchases made from the store by customers
- */
+
 public class PurchaseOrder extends Order{
 	
 	private double shippingPrice;
-	private Customer customer;
-	
+
 	public PurchaseOrder() {
 		super();
+		// TODO Auto-generated constructor stub
 		shippingPrice = 10.0;
-		this.customer = new Customer();
+		this.person = new Customer();
 	}
 	
 	private double calculateTotalPrice(){
