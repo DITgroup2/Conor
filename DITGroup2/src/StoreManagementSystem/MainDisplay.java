@@ -11,9 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JInternalFrame;
 import java.awt.SystemColor;
 import java.awt.Color;
-/**
- * The main application that is loaded after a valid login.
- */
+
 public class MainDisplay extends JFrame {
 
 	private JPanel contentPane;

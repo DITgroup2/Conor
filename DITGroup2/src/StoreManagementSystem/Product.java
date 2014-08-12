@@ -1,6 +1,6 @@
 package StoreManagementSystem;
 /**
- * Product class, containing all product details
+ * Product class
  * @author Conor Clarke
  */
 import java.util.ArrayList;
@@ -40,7 +40,7 @@ public class Product {
 	/**
 	 * Set the name of the item
 	 * 
-	 * @param productName ~
+	 * @param name ~
 	 */
 	public void setProductName(String productName) {
 		this.productName = productName;
