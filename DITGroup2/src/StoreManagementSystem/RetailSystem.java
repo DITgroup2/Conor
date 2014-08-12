@@ -31,11 +31,13 @@ public class RetailSystem {
 		purchaseOrderList = new ArrayList<PurchaseOrder>();
 		supplyOrderList = new ArrayList<SupplyOrder>();
 		menuOption = -1;
-		
+		automaticallyCreateStaff();
+		Login l = new Login(staffList);
+		l.run();
 		
 		boolean terminateProgram = false;
 		do{
-			displayMainMenu();
+			//displayMainMenu();
 			menuOption = Keyboard.readInt();
 			
 			switch(menuOption){

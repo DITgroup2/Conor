@@ -11,6 +11,7 @@ import javax.swing.JButton;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
@@ -34,6 +35,7 @@ public class Login extends JFrame {
 	private JLabel lblNewLabel;
 	private JPasswordField passwordField;
 	private boolean login;
+	private ArrayList<Person> staffList;
 	private String usernameText = new String();
 	private final Action action = new SwingAction();
 
@@ -41,8 +43,9 @@ public class Login extends JFrame {
 	 * Launches the window for the login screen
 	 */
 	public void run() {
+		
 		try {
-			Login frame = new Login();
+			Login frame = new Login(staffList);
 			frame.setVisible(true);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -51,10 +54,11 @@ public class Login extends JFrame {
 	
 	/**
 	 * Constructor for setting up the login screen with text fields 
-	 * for the username and password and a button
+	 * for the username and password and a button. The staff list is 
+	 * passed into the constructor
 	 */
-	public Login() {
-		Staff employee = new Staff(23,"hres",2);
+	public Login(ArrayList<Person> staffList) {
+		this.staffList = staffList;
 		
 		//Setup code for the JFrame and Panel
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -91,8 +95,21 @@ public class Login extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				usernameText = username.getText();
-				char [] validate = passwordField.getPassword();
-				login = employee.passwordValidation(validate);
+				Person user = null;
+				for(Person i:staffList){
+					if(i.getName().equals(usernameText)){
+						user = i;
+						break;
+					}	
+				}
+				if(user != null){
+					char [] validate = passwordField.getPassword();
+					login = ((Staff)user).passwordValidation(validate);
+				}
+				else{
+					JOptionPane.showMessageDialog(null,"Invalid username!");
+				}
+					
 			}
 		});
 		
@@ -115,7 +132,7 @@ public class Login extends JFrame {
 				display.run();
 			}
 			else
-				JOptionPane.showMessageDialog(null,"Invalid username or password!");
+				JOptionPane.showMessageDialog(null,"Invalid password!");
 		}
 	}
 }
