@@ -7,14 +7,14 @@ public class StockControl {
 	private ArrayList<Object[]> list;
 	private Object[] productAndQuantity;
 	
-	public static void main(String [] args){
+	/*	public static void main(String [] args){
 		StockControl c = new StockControl();
 		Supplier s = new Supplier("bob man bread", "a@b.c", "0896457123",
 			"church road, newtown, co laois","bob lynch", "06876453j");
 		Product p = new Product("bread","a loaf of bread", "bakery",0.40,s);
 		c.addNewProductToStockList(p, 20);
 		System.out.println(c.getStockListSize());
-	}
+	}*/
 	public StockControl(){
 		stockList = new ArrayList<Object[]>();
 		

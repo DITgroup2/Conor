@@ -34,18 +34,21 @@ public class Login extends JFrame {
 	private JTextField username;
 	private JLabel lblNewLabel;
 	private JPasswordField passwordField;
-	private boolean login;
-	private ArrayList<Person> staffList;
+	
+	private ArrayList<Person> staffList, customerList, supplierList;
+	private ArrayList<PurchaseOrder> purchaseOrderList;
+	private ArrayList<SupplyOrder> supplyOrderList;
+	
 	private String usernameText = new String();
 	private final Action action = new SwingAction();
+	private boolean login;
 
 	/**
 	 * Launches the window for the login screen
 	 */
 	public void run() {
-		
 		try {
-			Login frame = new Login(staffList);
+			Login frame = new Login(staffList, customerList, supplierList, purchaseOrderList, supplyOrderList);
 			frame.setVisible(true);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -57,9 +60,16 @@ public class Login extends JFrame {
 	 * for the username and password and a button. The staff list is 
 	 * passed into the constructor
 	 */
-	public Login(ArrayList<Person> staffList) {
+	public Login(ArrayList<Person> staffList, ArrayList<Person> customerList, ArrayList<Person> supplierList, 
+			     ArrayList<PurchaseOrder> purchaseOrderList,  ArrayList<SupplyOrder> supplyOrderList) {
 		this.staffList = staffList;
-		
+		this.customerList = customerList;
+		this.supplierList = supplierList;
+		this.purchaseOrderList = purchaseOrderList;
+		this.supplyOrderList = supplyOrderList;
+		runLogin();
+	}
+	public void runLogin(){
 		//Setup code for the JFrame and Panel
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 459, 339);
@@ -127,7 +137,7 @@ public class Login extends JFrame {
 				JOptionPane.showMessageDialog(null,"Login successful");
 				setVisible(false);
 				dispose();
-				MainDisplay display = new MainDisplay();
+				MainDisplay display = new MainDisplay(staffList, customerList, supplierList, purchaseOrderList, supplyOrderList);
 				//Access level
 				display.run();
 			}

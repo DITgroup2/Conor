@@ -20,7 +20,6 @@ public class Supplier extends Person {
 		return vatNumber;
 	}
 	
-
 	public void setVatNumber(String vatNumber) {
 		this.vatNumber = vatNumber;
 	}
@@ -29,7 +28,6 @@ public class Supplier extends Person {
 		return contactName;
 	}
 	
-
 	public void setContactName(String contactName) {
 		this.contactName = contactName;
 	}
@@ -39,7 +37,4 @@ public class Supplier extends Person {
 		System.out.println("Contact Name : "+contactName);	
 		System.out.println("Supplier VAT Number : "+vatNumber);	
 	}
-	
-	
-
 }

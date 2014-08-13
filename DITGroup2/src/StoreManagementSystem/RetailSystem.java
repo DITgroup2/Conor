@@ -36,10 +36,14 @@ public class RetailSystem {
 		purchaseOrderList = new ArrayList<PurchaseOrder>();
 		supplyOrderList = new ArrayList<SupplyOrder>();
 		menuOption = -1;
-		automaticallyCreateStaff();
-		Login l = new Login(staffList);
-		l.run();
 		
+		automaticallyCreateStaff();
+		automaticallyCreateSupplier();
+		
+		
+		 Login l = new Login(staffList, customerList, supplierList, purchaseOrderList, supplyOrderList);
+		 l.run();
+		 
 		boolean terminateProgram = false;
 		do{
 			displayMainMenu();
@@ -905,8 +909,6 @@ OUTER : do{
 		}while(menuOption!=0);
 		menuOption=-1;	
 	}
-	
-	
 	
 	public static void main(String args[]){
 		new RetailSystem();
