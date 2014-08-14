@@ -35,7 +35,9 @@ public class Login extends JFrame {
 	private JLabel lblNewLabel;
 	private JPasswordField passwordField;
 	
-	private ArrayList<Person> staffList, customerList, supplierList;
+	private ArrayList<Staff> staffList;
+	private ArrayList<Customer>customerList;
+	private ArrayList<Supplier> supplierList;
 	private ArrayList<PurchaseOrder> purchaseOrderList;
 	private ArrayList<SupplyOrder> supplyOrderList;
 	
@@ -60,7 +62,7 @@ public class Login extends JFrame {
 	 * for the username and password and a button. The staff list is 
 	 * passed into the constructor
 	 */
-	public Login(ArrayList<Person> staffList, ArrayList<Person> customerList, ArrayList<Person> supplierList, 
+	public Login(ArrayList<Staff> staffList, ArrayList<Customer> customerList, ArrayList<Supplier> supplierList, 
 			     ArrayList<PurchaseOrder> purchaseOrderList,  ArrayList<SupplyOrder> supplyOrderList) {
 		this.staffList = staffList;
 		this.customerList = customerList;
@@ -105,8 +107,8 @@ public class Login extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				usernameText = username.getText();
-				Person user = null;
-				for(Person i:staffList){
+				Staff user = null;
+				for(Staff i:staffList){
 					if(i.getName().equals(usernameText)){
 						user = i;
 						break;

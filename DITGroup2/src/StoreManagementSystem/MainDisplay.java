@@ -19,7 +19,10 @@ import java.util.ArrayList;
 public class MainDisplay extends JFrame {
 
 	private JPanel contentPane;
-	private ArrayList<Person> staffList, customerList, supplierList;
+	private StockControl stockControl;
+	private ArrayList<Customer> customerList;
+	private ArrayList<Staff> staffList;
+	private ArrayList<Supplier> supplierList;
 	private ArrayList<PurchaseOrder> purchaseOrderList;
 	private ArrayList<SupplyOrder> supplyOrderList;
 	
@@ -38,8 +41,8 @@ public class MainDisplay extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public MainDisplay(ArrayList<Person> staffList, ArrayList<Person> customerList, ArrayList<Person> supplierList, 
-		     		   ArrayList<PurchaseOrder> purchaseOrderList,  ArrayList<SupplyOrder> supplyOrderList) {
+	public MainDisplay(ArrayList<Staff> staffList, ArrayList<Customer> customerList, ArrayList<Supplier> supplierList, 
+		     ArrayList<PurchaseOrder> purchaseOrderList,  ArrayList<SupplyOrder> supplyOrderList) {
 		this.staffList = staffList;
 		this.customerList = customerList;
 		this.supplierList = supplierList;

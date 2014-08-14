@@ -40,10 +40,6 @@ public class RetailSystem {
 		automaticallyCreateStaff();
 		automaticallyCreateSupplier();
 		
-		
-		 Login l = new Login(staffList, customerList, supplierList, purchaseOrderList, supplyOrderList);
-		 l.run();
-		 
 		boolean terminateProgram = false;
 		do{
 			displayMainMenu();
@@ -301,9 +297,6 @@ public class RetailSystem {
 		menuOption=-1;	
 	}
 	
-	
-	
-	
 	private Object[] getProductById(int id){
 		boolean isFound = false;
 			Object [] object = stockControl.findProductInStockList(id);
@@ -331,7 +324,6 @@ public class RetailSystem {
 		System.out.println("not good");
 		return null;
 	}
-	
 	
 	public boolean isUserInputValid(String input){
 		
@@ -429,10 +421,7 @@ OUTER : do{
 		stockControl.addNewProductToStockList(product, quantity);
 		System.out.println(quantity+" "+productName+" was successfully added to stock.");
 	}
-	
-	
-	
-			
+		
 	private Supplier getSupplierById(int id){
 		boolean isFound = false;
 		
@@ -508,14 +497,6 @@ OUTER : do{
 		stockControl.addNewProductToStockList(product, 6);
 	}
 	
-	
-	
-	
-	private Supplier getRandomSupplier(){
-		int randomSupplier = random.nextInt((supplierList.size() - 1) + 1);
-		return (Supplier)supplierList.get(randomSupplier);		
-	}
-	
 	private void automaticallyCreateCustomer(){
 		person = new Customer("Roland","roland@msn.com","08712345","12 Main Street");
 		customerList.add(person);
@@ -527,7 +508,7 @@ OUTER : do{
 	}
 	
 	private void automaticallyCreateStaff(){
-		person = new Staff("Jim","jim@msn.com","08712345","123 Main Street","password",1);
+		person = new Staff("Jim","jim@msn.com","08712345","123 Main Street","pass",1);
 		staffList.add(person);
 		person = new Staff("John","john@msn.com","08609382","38 Main Street","password",2);
 		staffList.add(person);
@@ -546,6 +527,10 @@ OUTER : do{
 		displayPersonList(person);
 	}
 	
+	private Supplier getRandomSupplier(){
+		int randomSupplier = random.nextInt((supplierList.size() - 1) + 1);
+		return (Supplier)supplierList.get(randomSupplier);		
+	}
 	private void displayPersonList(Person person){
 		if(person instanceof Customer){
 			displayList = customerList;
@@ -624,7 +609,6 @@ OUTER : do{
 			}
 		}while(menuOption!=0);
 	}
-	
 	
 	public void createNewPerson(Person pers){
 		person = pers;
@@ -836,7 +820,6 @@ OUTER : do{
 		else
 			System.out.println("The "+personType+"s list is empty.\n");	
 	}
-	
 	
 	public void removePerson(Person pers){
 		String personType = "";
